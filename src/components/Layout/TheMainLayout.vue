@@ -26,5 +26,10 @@ export default {
 }
 .sidebar-container {
   width: 280px;
+  position: fixed;
+}
+.content-container {
+  width: 100%;
+  margin-left: 280px;
 }
 </style>

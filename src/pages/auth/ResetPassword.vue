@@ -125,7 +125,6 @@ export default {
   font-size: 24px;
   text-align: center;
   margin-bottom: 2rem;
-  font-family: Roboto_Regular;
 }
 #rest-password-container .form-container {
   background-color: #ffffff;
@@ -138,7 +137,6 @@ export default {
   margin-top: 1rem;
 }
 #rest-password-container .link-container .link {
-  font-family: Roboto_Regular;
   color: #8f8b8d;
   font-size: 15px;
   cursor: pointer;

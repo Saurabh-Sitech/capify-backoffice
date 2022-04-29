@@ -53,7 +53,7 @@ export default {
         const actionPayload = {
           email: this.email,
         };
-        console.log(actionPayload);
+        this.$router.push(`/reset-password?email=${actionPayload.email}`);
       }
     },
     setValue(val, field) {
@@ -109,7 +109,6 @@ export default {
   font-size: 24px;
   text-align: center;
   margin-bottom: 2rem;
-  font-family: Roboto_Regular;
 }
 #forgot-password-container .form-container {
   background-color: #ffffff;
@@ -122,7 +121,6 @@ export default {
   margin-top: 1rem;
 }
 #forgot-password-container .link-container .link {
-  font-family: Roboto_Regular;
   color: #8f8b8d;
   font-size: 15px;
   cursor: pointer;

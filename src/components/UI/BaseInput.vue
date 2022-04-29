@@ -64,7 +64,6 @@ export default {
   font-size: 0.75rem;
   margin-top: 3px;
   text-align: left;
-  font-family: Roboto_Regular;
   font-weight: 400;
   line-height: 1.66;
   letter-spacing: 0.03333em;

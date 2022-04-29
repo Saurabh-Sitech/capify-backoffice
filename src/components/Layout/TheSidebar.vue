@@ -89,7 +89,7 @@ export default {
           name: "Notifications",
           active_icon: "notification-icon-active.png",
           inactive_icon: "notification-icon-inactive.png",
-          notification_count: 7,
+          notification_count: 2,
           link: "/notifications",
         },
       ],
@@ -210,7 +210,6 @@ export default {
 .link {
   cursor: pointer;
   font-size: 15px;
-  font-family: Roboto_Regular;
   color: #741b47;
 }
 .link:hover {

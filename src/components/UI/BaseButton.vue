@@ -25,6 +25,7 @@ export default {
   padding: 10px 20px;
   width: -webkit-fill-available;
   cursor: pointer;
+  font-family: Roboto_Regular;
 }
 .primaryBtn {
   background-color: #741b47;
