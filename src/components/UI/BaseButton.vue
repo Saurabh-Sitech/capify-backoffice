@@ -6,7 +6,7 @@
     }"
     :type="type"
     @click="onClick"
-    :style="style"
+    :style="customStyle"
   >
     <slot></slot>
   </button>
@@ -14,7 +14,13 @@
 
 <script>
 export default {
-  props: ["type", "onClick", "stylevariant", "style"],
+  emits: ["onClick"],
+  props: ["type", "stylevariant", "customStyle"],
+  methods: {
+    onClick() {
+      this.$emit("onClick");
+    },
+  },
 };
 </script>
 

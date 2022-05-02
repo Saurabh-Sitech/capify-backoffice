@@ -32,7 +32,8 @@
           <base-button
             type="submit"
             stylevariant="primary"
-            style="font-size: 15px; font-family: Roboto_Medium"
+            customStyle="font-size: 15px; font-family: Roboto_Medium"
+            @onClick="submitForm"
           >
             SET PASSWORD
           </base-button>

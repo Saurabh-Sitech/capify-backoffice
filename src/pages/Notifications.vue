@@ -10,10 +10,14 @@
           :value="searchText"
           @change-value="setValue"
           :removeDefaultMargin="true"
-          :style="getSearchBoxStyle"
+          :customStyle="getSearchBoxStyle"
         ></base-input>
 
-        <base-button stylevariant="primary" :style="getFilterButtonStyle">
+        <base-button
+          stylevariant="primary"
+          :customStyle="getFilterButtonStyle"
+          @onClick="filterData"
+        >
           Filters
         </base-button>
       </div>
@@ -120,6 +124,7 @@ export default {
     setPage(page) {
       this.active_page = page;
     },
+    filterData() {},
   },
   computed: {
     getSearchBoxStyle() {

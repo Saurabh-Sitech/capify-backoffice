@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import Vue from "vue";
 import router from "./router.js";
 import store from "./store/index.js";
 import App from "./App.vue";
@@ -7,13 +7,13 @@ import BaseButton from "./components/UI/BaseButton.vue";
 import BaseSpinner from "./components/UI/BaseSpinner.vue";
 import BasePagination from "./components/UI/BasePagination.vue";
 
-const app = createApp(App);
+Vue.component("base-input", BaseInput);
+Vue.component("base-button", BaseButton);
+Vue.component("base-spinner", BaseSpinner);
+Vue.component("base-pagination", BasePagination);
 
-app.use(router);
-app.use(store);
-app.component("base-input", BaseInput);
-app.component("base-button", BaseButton);
-app.component("base-spinner", BaseSpinner);
-app.component("base-pagination", BasePagination);
-
-app.mount("#app");
+new Vue({
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");

@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+import Vue from "vue";
+import Router from "vue-router";
 
 import Login from "./pages/auth/Login.vue";
 import ForgotPassword from "./pages/auth/ForgotPassword.vue";
@@ -10,8 +11,10 @@ import Companies from "./pages/Companies.vue";
 import Repayments from "./pages/Repayments.vue";
 import Notifications from "./pages/Notifications.vue";
 
-const router = createRouter({
-  history: createWebHistory(),
+Vue.use(Router);
+
+const router = new Router({
+  mode: "history",
   routes: [
     { path: "/", redirect: "/login" },
     {

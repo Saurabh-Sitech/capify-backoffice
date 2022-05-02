@@ -10,7 +10,7 @@
       :label="label"
       :placeholder="placeholder"
       v-model.trim="inputfield"
-      :style="style"
+      :style="customStyle"
     />
     <div class="helperText" v-if="helperText">
       {{ helperText }}
@@ -29,7 +29,7 @@ export default {
     "helperText",
     "field",
     "value",
-    "style",
+    "customStyle",
     "removeDefaultMargin",
   ],
   data() {
