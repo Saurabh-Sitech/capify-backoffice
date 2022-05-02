@@ -85,6 +85,8 @@
           class="company-block"
           v-for="(company, index) in companies"
           :key="index"
+          @mouseenter="comMouseEnter(index)"
+          @mouseleave="comMouseLeave"
         >
           <div class="flex-container">
             <div class="flex-container">
@@ -99,13 +101,40 @@
                 <div class="company-date">on Feb 5, 2022</div>
               </div>
             </div>
-            <div class="company-state flex-container">
-              <img
-                src="/images/screening-icon.png"
-                alt="screening-icon"
-                style="margin-right: 0.2rem"
-              />
-              <div>SCREENING</div>
+            <div class="flex-container" style="position: relative">
+              <div class="company-state flex-container">
+                <img
+                  src="/images/screening-icon.png"
+                  alt="screening-icon"
+                  style="margin-right: 0.2rem"
+                />
+                <div>SCREENING</div>
+              </div>
+              <div
+                class="action-container flex-container"
+                style="justify-content: center"
+                v-if="hoverIndex === index"
+                @click="openMenu"
+              >
+                <img
+                  :src="
+                    openMenuFlag
+                      ? '/images/eye-icon.png'
+                      : '/images/dot-icon.png'
+                  "
+                  :alt="openMenuFlag ? 'eye-icon' : 'dot-icon'"
+                />
+              </div>
+              <div
+                class="action-menu"
+                v-click-outside="clickOutside"
+                v-if="hoverIndex === index && openMenuFlag"
+              >
+                <div class="action-menu-item" style="margin-bottom: 0.5rem">
+                  View
+                </div>
+                <div class="action-menu-item">Move to next stage</div>
+              </div>
             </div>
           </div>
         </div>
@@ -124,8 +153,31 @@ export default {
   data() {
     return {
       chart: null,
+      hoverIndex: null,
+      openMenuFlag: false,
+      clickOutsideCalled: false,
       companies: [1, 2, 3, 4, 5, 6, 7],
     };
+  },
+  methods: {
+    comMouseEnter(index) {
+      if (!this.openMenuFlag) this.hoverIndex = index;
+    },
+    comMouseLeave() {
+      if (!this.openMenuFlag) this.hoverIndex = null;
+    },
+    openMenu() {
+      this.openMenuFlag = !this.openMenuFlag;
+      this.clickOutsideCalled = false;
+    },
+    clickOutside() {
+      if (this.clickOutsideCalled) {
+        this.clickOutsideCalled = false;
+        this.openMenuFlag = false;
+      } else {
+        this.clickOutsideCalled = true;
+      }
+    },
   },
   mounted() {
     this.chart = new CanvasJS.Chart("chart", {
@@ -259,6 +311,28 @@ export default {
   font-size: 11px;
   font-family: "Roboto_Bold";
   border-radius: 5px;
+}
+.action-container {
+  height: 30px;
+  width: 30px;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+  background-color: #dfddd9;
+  cursor: pointer;
+}
+.action-menu {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 4px #17172429;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 12px;
+  right: 0;
+  bottom: -60px;
+  z-index: 99999;
+}
+.action-menu-item {
+  cursor: pointer;
 }
 .all-companies-link {
   cursor: pointer;
