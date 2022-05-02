@@ -1,5 +1,5 @@
 <template>
-  <div id="rest-password-container">
+  <div id="reset-password-container">
     <base-spinner v-if="loading"></base-spinner>
     <div class="flex-container">
       <div class="form-container">
@@ -103,45 +103,45 @@ export default {
 </script>
 
 <style scoped>
-#rest-password-container {
+#reset-password-container {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#rest-password-container .flex-container {
+#reset-password-container .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#rest-password-container .logo-container {
+#reset-password-container .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
 }
-#rest-password-container .welcome-text {
+#reset-password-container .welcome-text {
   color: #5e595c;
   font-size: 24px;
   text-align: center;
   margin-bottom: 2rem;
 }
-#rest-password-container .form-container {
+#reset-password-container .form-container {
   background-color: #ffffff;
   box-shadow: 1px 2px 29px #1717241a;
   border-radius: 5px;
   padding: 50px;
   width: 370px;
 }
-#rest-password-container .link-container {
+#reset-password-container .link-container {
   margin-top: 1rem;
 }
-#rest-password-container .link-container .link {
+#reset-password-container .link-container .link {
   color: #8f8b8d;
   font-size: 15px;
   cursor: pointer;
 }
-#rest-password-container .link-container .link:hover {
+#reset-password-container .link-container .link:hover {
   text-decoration: underline;
 }
 </style>

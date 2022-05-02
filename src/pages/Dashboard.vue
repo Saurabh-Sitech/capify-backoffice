@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="dashboard-container">
     <div class="flex-container">
       <div class="block" style="background-color: transparent">
         <div class="title">Hello Dunya</div>
@@ -87,6 +87,11 @@
           :key="index"
           @mouseenter="comMouseEnter(index)"
           @mouseleave="comMouseLeave"
+          :style="
+            hoverIndex === index
+              ? 'box-shadow: 1px 2px 8px #17172429'
+              : 'box-shadow: 0px 1px 4px #17172429'
+          "
         >
           <div class="flex-container">
             <div class="flex-container">
@@ -127,7 +132,6 @@
               </div>
               <div
                 class="action-menu"
-                v-click-outside="clickOutside"
                 v-if="hoverIndex === index && openMenuFlag"
               >
                 <div class="action-menu-item" style="margin-bottom: 0.5rem">
@@ -155,28 +159,19 @@ export default {
       chart: null,
       hoverIndex: null,
       openMenuFlag: false,
-      clickOutsideCalled: false,
       companies: [1, 2, 3, 4, 5, 6, 7],
     };
   },
   methods: {
     comMouseEnter(index) {
-      if (!this.openMenuFlag) this.hoverIndex = index;
+      this.hoverIndex = index;
     },
     comMouseLeave() {
-      if (!this.openMenuFlag) this.hoverIndex = null;
+      this.hoverIndex = null;
+      this.openMenuFlag = false;
     },
     openMenu() {
       this.openMenuFlag = !this.openMenuFlag;
-      this.clickOutsideCalled = false;
-    },
-    clickOutside() {
-      if (this.clickOutsideCalled) {
-        this.clickOutsideCalled = false;
-        this.openMenuFlag = false;
-      } else {
-        this.clickOutsideCalled = true;
-      }
     },
   },
   mounted() {
@@ -210,27 +205,27 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#dashboard-container {
   padding: 60px 40px;
 }
-.flex-container {
+#dashboard-container .flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.title {
+#dashboard-container .title {
   font-size: 18px;
   font-family: Roboto_Medium;
   color: #8f8b8d;
   margin-bottom: 5px;
 }
-.user-role {
+#dashboard-container .user-role {
   font-size: 14px;
   font-family: Roboto_Medium;
   color: #bab8b9;
   margin-bottom: 25px;
 }
-.block {
+#dashboard-container .block {
   flex-basis: 100%;
   border-radius: 5px;
   background-color: #dfddd9;
@@ -239,18 +234,18 @@ export default {
   margin: 5px;
   color: #741b47;
 }
-.label {
+#dashboard-container .label {
   font-size: 14px;
   font-family: Roboto_Medium;
 }
-.value {
+#dashboard-container .value {
   font-size: 16px;
   font-family: Roboto_Bold;
 }
-.sub-title {
+#dashboard-container .sub-title {
   font-size: 13px;
 }
-.content-block {
+#dashboard-container .content-block {
   flex-basis: 100%;
   border-radius: 5px;
   background-color: #ffffff;
@@ -259,52 +254,51 @@ export default {
   margin: 5px;
   box-shadow: 1px 2px 29px #1717241a;
 }
-.circle {
+#dashboard-container .circle {
   height: 6px;
   width: 6px;
   border-radius: 50%;
   margin-right: 1rem;
 }
-.total-title {
+#dashboard-container .total-title {
   font-size: 18px;
   font-family: Roboto_Bold;
   color: #260b19;
   border-bottom: 2px solid;
 }
-.single-title {
+#dashboard-container .single-title {
   font-size: 15px;
   color: #5e595c;
   padding: 0.5rem 0rem 0.5rem 0rem;
   margin: 0.5rem 0rem 0.5rem 1.5rem;
   border-bottom: 1px solid #dfddd9;
 }
-.map-container {
+#dashboard-container .map-container {
   height: 250px;
   border-radius: 5px;
   box-shadow: 0px 1px 4px #17172429;
   margin-top: 2rem;
   padding: 1rem;
 }
-.company-block {
-  box-shadow: 0px 1px 4px #17172429;
+#dashboard-container .company-block {
   background-color: #ffffff;
   border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
-.company-avatar {
+#dashboard-container .company-avatar {
   margin-right: 0.5rem;
 }
-.company-name {
+#dashboard-container .company-name {
   font-size: 14px;
   font-family: "Roboto_Medium";
   color: #260b19;
 }
-.company-date {
+#dashboard-container .company-date {
   font-size: 13px;
   color: #bab8b9;
 }
-.company-state {
+#dashboard-container .company-state {
   padding: 0.2rem 0.5rem;
   border: 1px solid #8f8b8d;
   color: #8f8b8d;
@@ -312,7 +306,7 @@ export default {
   font-family: "Roboto_Bold";
   border-radius: 5px;
 }
-.action-container {
+#dashboard-container .action-container {
   height: 30px;
   width: 30px;
   margin-left: 0.5rem;
@@ -320,7 +314,7 @@ export default {
   background-color: #dfddd9;
   cursor: pointer;
 }
-.action-menu {
+#dashboard-container .action-menu {
   position: absolute;
   background-color: #ffffff;
   box-shadow: 0px 1px 4px #17172429;
@@ -331,17 +325,17 @@ export default {
   bottom: -60px;
   z-index: 99999;
 }
-.action-menu-item {
+#dashboard-container .action-menu-item {
   cursor: pointer;
 }
-.all-companies-link {
+#dashboard-container .all-companies-link {
   cursor: pointer;
   color: #741b47;
   font-size: 15px;
   text-align: center;
   margin-top: 2rem;
 }
-.all-companies-link:hover {
+#dashboard-container .all-companies-link:hover {
   text-decoration: underline;
 }
 </style>

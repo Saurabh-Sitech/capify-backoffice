@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="not-found-container">
     <div>
       <h2>Page not found</h2>
       <p>
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped>
-.container {
+#not-found-container {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,9 +1,9 @@
 <template>
   <div id="main-container">
-    <div class="sidebar-container">
+    <div id="sidebar-container">
       <the-sidebar></the-sidebar>
     </div>
-    <div class="content-container">
+    <div id="content-container">
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -24,12 +24,14 @@ export default {
 #main-container {
   display: flex;
 }
-.sidebar-container {
+#sidebar-container {
   width: 280px;
   position: fixed;
 }
-.content-container {
+#content-container {
+  height: 100vh;
   width: 100%;
   margin-left: 280px;
+  overflow: auto;
 }
 </style>

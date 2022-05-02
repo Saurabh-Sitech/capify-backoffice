@@ -84,7 +84,7 @@ router.beforeEach((to, _, next) => {
 });
 
 router.afterEach(() => {
-  const element = document.getElementById("main-container");
+  const element = document.getElementById("content-container");
   if (element) {
     element.scrollTop = 0;
   }

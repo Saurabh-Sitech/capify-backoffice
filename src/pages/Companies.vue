@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="companies-container">
     <div class="title">Companies</div>
   </div>
 </template>
@@ -11,10 +11,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#companies-container {
   padding: 65px 45px;
 }
-.title {
+#companies-container .title {
   font-size: 18px;
   font-family: Roboto_Medium;
   color: #8f8b8d;

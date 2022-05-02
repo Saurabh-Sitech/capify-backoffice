@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="notifications-container">
     <div class="title">Notifications</div>
     <div class="top-container">
       <div class="filter-container">
@@ -144,48 +144,48 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#notifications-container {
   padding: 65px 45px;
 }
-.title {
+#notifications-container .title {
   font-size: 18px;
   font-family: Roboto_Medium;
   color: #8f8b8d;
   margin-bottom: 30px;
 }
-.top-container {
+#notifications-container .top-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.filter-container {
+#notifications-container .filter-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.block {
+#notifications-container .block {
   background-color: #ffffff;
   border-radius: 5px;
   border-left: 8px solid;
   padding: 1rem;
   margin-bottom: 0.5rem;
 }
-.date-label {
+#notifications-container .date-label {
   font-size: 15px;
   color: #8f8b8d;
 }
-.title-label {
+#notifications-container .title-label {
   font-size: 18px;
   font-family: Roboto_Medium;
   color: #5e595c;
   margin: 0.25rem 0rem;
 }
-.description-label {
+#notifications-container .description-label {
   font-size: 15px;
   color: #8f8b8d;
 }
-.bottom-container {
+#notifications-container .bottom-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
