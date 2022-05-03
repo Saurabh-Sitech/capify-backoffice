@@ -1,30 +1,30 @@
 <template>
   <div id="dashboard-container">
-    <div class="flex-container">
-      <div class="block" style="background-color: transparent">
+    <b-row>
+      <b-col class="block" style="background-color: transparent">
         <div class="title">Hello Dunya</div>
         <div class="user-role">Admin</div>
-      </div>
-      <div class="block">
+      </b-col>
+      <b-col class="block">
         <div class="label">FACILITY RAISED</div>
         <div class="value">$ 6,000,000</div>
-      </div>
-      <div class="block">
+      </b-col>
+      <b-col class="block">
         <div class="label">FACILITY EXTENDED</div>
         <div class="value">$ 4,500,000</div>
         <div class="sub-title">Sale Price: $ 7,000,000</div>
-      </div>
-      <div class="block">
+      </b-col>
+      <b-col class="block">
         <div class="label">UNUTALIZED</div>
         <div class="value">$ 1,500,000</div>
-      </div>
-      <div class="block">
+      </b-col>
+      <b-col class="block">
         <div class="label">OUTSTANDING</div>
         <div class="value">$ 5,000,000</div>
-      </div>
-    </div>
-    <div class="flex-container" style="margin-top: 10px">
-      <div class="content-block" style="margin-right: 10px">
+      </b-col>
+    </b-row>
+    <b-row style="margin-top: 10px">
+      <b-col class="content-block">
         <div
           class="flex-container total-title"
           style="padding-bottom: 1rem; border-color: #dfddd9"
@@ -71,10 +71,10 @@
           <div>22</div>
         </div>
         <div class="map-container">
-          <div id="chart" style="height: 250px"></div>
+          <div id="chart" style="height: 100%; width: 100%"></div>
         </div>
-      </div>
-      <div class="content-block" style="margin-left: 10px">
+      </b-col>
+      <b-col class="content-block">
         <div
           class="total-title"
           style="padding-bottom: 1rem; border-color: transparent"
@@ -143,8 +143,8 @@
           </div>
         </div>
         <div class="all-companies-link">See all companies</div>
-      </div>
-    </div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -226,10 +226,8 @@ export default {
   margin-bottom: 25px;
 }
 #dashboard-container .block {
-  flex-basis: 100%;
   border-radius: 5px;
   background-color: #dfddd9;
-  height: 50px;
   padding: 1rem;
   margin: 5px;
   color: #741b47;
@@ -246,10 +244,8 @@ export default {
   font-size: 13px;
 }
 #dashboard-container .content-block {
-  flex-basis: 100%;
   border-radius: 5px;
   background-color: #ffffff;
-  height: 560px;
   padding: 2rem 1.5rem;
   margin: 5px;
   box-shadow: 1px 2px 29px #1717241a;
@@ -327,6 +323,8 @@ export default {
 }
 #dashboard-container .action-menu-item {
   cursor: pointer;
+  color: #260b19;
+  font-size: 13px;
 }
 #dashboard-container .all-companies-link {
   cursor: pointer;

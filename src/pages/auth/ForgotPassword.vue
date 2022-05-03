@@ -116,7 +116,7 @@ export default {
   box-shadow: 1px 2px 29px #1717241a;
   border-radius: 5px;
   padding: 50px;
-  width: 370px;
+  width: 500px;
 }
 #forgot-password-container .link-container {
   margin-top: 1rem;

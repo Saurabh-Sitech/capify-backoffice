@@ -72,7 +72,7 @@ export default {
   border-color: red !important;
   background-color: white !important;
 }
-input {
+.form-control {
   padding: 10px;
   font-size: 14px;
   font-family: Roboto_Regular;
@@ -80,12 +80,19 @@ input {
   border-radius: 10px;
   border: 1px solid #edece9;
 }
-input:focus-visible {
-  border: 1px solid #741b47;
+.form-control:focus-visible {
+  border-color: #741b47;
   outline: none;
+  box-shadow: none;
 }
-input:hover {
-  border: 1px solid #741b47;
+.form-control:hover {
+  border-color: #741b47;
   outline: none;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #741b47;
+  outline: none;
+  box-shadow: none;
 }
 </style>

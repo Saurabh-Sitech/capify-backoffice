@@ -33,6 +33,9 @@ export default {
   cursor: pointer;
   font-family: Roboto_Regular;
 }
+.btn:focus {
+  box-shadow: none;
+}
 .primaryBtn {
   background-color: #741b47;
   color: #ffe599;
