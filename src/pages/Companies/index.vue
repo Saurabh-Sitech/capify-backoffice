@@ -113,6 +113,7 @@
           class="content-block"
           @mouseenter="comMouseEnter(index)"
           @mouseleave="comMouseLeave"
+          @click="openDetail(index)"
         >
           <div class="d-flex align-items-center">
             <img
@@ -261,6 +262,9 @@ export default {
     comMouseLeave() {
       this.hoverIndex = null;
       this.openMenuFlag = false;
+    },
+    openDetail(index) {
+      this.$router.push(`/companies/${index}`);
     },
     openMenu() {
       this.openMenuFlag = !this.openMenuFlag;

@@ -22,6 +22,11 @@
   src: url("./fonts/Roboto-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Roboto_Italic";
+  src: url("./fonts/Roboto-Italic.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: "Roboto_Regular" !important;

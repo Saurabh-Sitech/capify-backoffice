@@ -7,7 +7,8 @@ import ResetPassword from "./pages/auth/ResetPassword.vue";
 import NotFound from "./pages/NotFound.vue";
 import TheMainLayout from "./components/Layout/TheMainLayout.vue";
 import Dashboard from "./pages/Dashboard.vue";
-import Companies from "./pages/Companies.vue";
+import Companies from "./pages/Companies/index.vue";
+import CompanyDetail from "./pages/Companies/CompanyDetail.vue";
 import Repayments from "./pages/Repayments.vue";
 import Notifications from "./pages/Notifications.vue";
 
@@ -50,6 +51,12 @@ const router = new Router({
           meta: { title: "Companies", requiresAuth: true },
           path: "companies",
           component: Companies,
+        },
+        {
+          name: "CompanyDetail",
+          meta: { title: "Company Detail", requiresAuth: true },
+          path: "companies/:id",
+          component: CompanyDetail,
         },
         {
           name: "Repayments",
