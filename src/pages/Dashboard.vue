@@ -1,148 +1,166 @@
 <template>
   <div id="dashboard-container">
     <b-row>
-      <b-col class="block" style="background-color: transparent">
-        <div class="title">Hello Dunya</div>
-        <div class="user-role">Admin</div>
+      <b-col>
+        <div class="block" style="background-color: transparent; padding: 0rem">
+          <div class="title">Hello Dunya</div>
+          <div class="user-role">Admin</div>
+        </div>
       </b-col>
-      <b-col class="block">
-        <div class="label">FACILITY RAISED</div>
-        <div class="value">$ 6,000,000</div>
+      <b-col>
+        <div class="block">
+          <div class="label">FACILITY RAISED</div>
+          <div class="value">$ 6,000,000</div>
+          <div class="sub-title"></div>
+        </div>
       </b-col>
-      <b-col class="block">
-        <div class="label">FACILITY EXTENDED</div>
-        <div class="value">$ 4,500,000</div>
-        <div class="sub-title">Sale Price: $ 7,000,000</div>
+      <b-col>
+        <div class="block">
+          <div class="label">FACILITY EXTENDED</div>
+          <div class="value">$ 4,500,000</div>
+          <div class="sub-title">Sale Price: $ 7,000,000</div>
+        </div>
       </b-col>
-      <b-col class="block">
-        <div class="label">UNUTALIZED</div>
-        <div class="value">$ 1,500,000</div>
+      <b-col>
+        <div class="block">
+          <div class="label">UNUTALIZED</div>
+          <div class="value">$ 1,500,000</div>
+          <div class="sub-title"></div>
+        </div>
       </b-col>
-      <b-col class="block">
-        <div class="label">OUTSTANDING</div>
-        <div class="value">$ 5,000,000</div>
+      <b-col>
+        <div class="block">
+          <div class="label">OUTSTANDING</div>
+          <div class="value">$ 5,000,000</div>
+          <div class="sub-title"></div>
+        </div>
       </b-col>
     </b-row>
-    <b-row style="margin-top: 10px">
-      <b-col class="content-block">
-        <div
-          class="flex-container total-title"
-          style="padding-bottom: 1rem; border-color: #dfddd9"
-        >
-          <div class="flex-container">
-            <div class="circle" style="background-color: #bab8b9"></div>
-            <div>Total Registered Companies</div>
+
+    <b-row style="margin-top: 1rem">
+      <b-col lg="6" sm="12">
+        <div class="content-block">
+          <div
+            class="flex-container total-title"
+            style="padding-bottom: 1rem; border-color: #dfddd9"
+          >
+            <div class="flex-container">
+              <div class="circle" style="background-color: #bab8b9"></div>
+              <div>Total Registered Companies</div>
+            </div>
+            <div>120</div>
           </div>
-          <div>120</div>
-        </div>
-        <div class="flex-container single-title">
-          <div class="flex-container">
-            <div class="circle" style="background-color: #41ce98"></div>
-            <div>In Screening</div>
+          <div class="flex-container single-title">
+            <div class="flex-container">
+              <div class="circle" style="background-color: #41ce98"></div>
+              <div>In Screening</div>
+            </div>
+            <div>70</div>
           </div>
-          <div>70</div>
-        </div>
-        <div class="flex-container single-title">
-          <div class="flex-container">
-            <div class="circle" style="background-color: #411884"></div>
-            <div>Qualified</div>
+          <div class="flex-container single-title">
+            <div class="flex-container">
+              <div class="circle" style="background-color: #411884"></div>
+              <div>Qualified</div>
+            </div>
+            <div>40</div>
           </div>
-          <div>40</div>
-        </div>
-        <div class="flex-container single-title">
-          <div class="flex-container">
-            <div class="circle" style="background-color: #cc4e00"></div>
-            <div>Not Qualified</div>
+          <div class="flex-container single-title">
+            <div class="flex-container">
+              <div class="circle" style="background-color: #cc4e00"></div>
+              <div>Not Qualified</div>
+            </div>
+            <div>30</div>
           </div>
-          <div>30</div>
-        </div>
-        <div class="flex-container single-title">
-          <div class="flex-container">
-            <div class="circle" style="background-color: #1c9d0b"></div>
-            <div>In Execution</div>
+          <div class="flex-container single-title">
+            <div class="flex-container">
+              <div class="circle" style="background-color: #1c9d0b"></div>
+              <div>In Execution</div>
+            </div>
+            <div>33</div>
           </div>
-          <div>33</div>
-        </div>
-        <div class="flex-container single-title">
-          <div class="flex-container">
-            <div class="circle" style="background-color: #741b47"></div>
-            <div>Funded</div>
+          <div class="flex-container single-title">
+            <div class="flex-container">
+              <div class="circle" style="background-color: #741b47"></div>
+              <div>Funded</div>
+            </div>
+            <div>22</div>
           </div>
-          <div>22</div>
-        </div>
-        <div class="map-container">
-          <div id="chart" style="height: 100%; width: 100%"></div>
+          <div class="map-container">
+            <div id="chart" style="height: 100%; width: 100%"></div>
+          </div>
         </div>
       </b-col>
-      <b-col class="content-block">
-        <div
-          class="total-title"
-          style="padding-bottom: 1rem; border-color: transparent"
-        >
-          Recently Registered
-        </div>
-        <div
-          class="company-block"
-          v-for="(company, index) in companies"
-          :key="index"
-          @mouseenter="comMouseEnter(index)"
-          @mouseleave="comMouseLeave"
-          :style="
-            hoverIndex === index
-              ? 'box-shadow: 1px 2px 8px #17172429'
-              : 'box-shadow: 0px 1px 4px #17172429'
-          "
-        >
-          <div class="flex-container">
+      <b-col lg="6" sm="12">
+        <div class="content-block">
+          <div
+            class="total-title"
+            style="padding-bottom: 1rem; border-color: transparent"
+          >
+            Recently Registered
+          </div>
+          <div
+            class="company-block"
+            v-for="(company, index) in companies"
+            :key="index"
+            @mouseenter="comMouseEnter(index)"
+            @mouseleave="comMouseLeave"
+            :style="
+              hoverIndex === index
+                ? 'box-shadow: 1px 2px 8px #17172429'
+                : 'box-shadow: 0px 1px 4px #17172429'
+            "
+          >
             <div class="flex-container">
-              <img
-                class="company-avatar"
-                src="/images/marz-logo.png"
-                alt="marz-logo"
-              />
+              <div class="flex-container">
+                <img
+                  class="company-avatar"
+                  src="/images/marz-logo.png"
+                  alt="marz-logo"
+                />
 
-              <div>
-                <div class="company-name">Marz Inc.</div>
-                <div class="company-date">on Feb 5, 2022</div>
-              </div>
-            </div>
-            <div class="flex-container" style="position: relative">
-              <div class="company-state flex-container">
-                <img
-                  src="/images/screening-icon.png"
-                  alt="screening-icon"
-                  style="margin-right: 0.2rem"
-                />
-                <div>SCREENING</div>
-              </div>
-              <div
-                class="action-container flex-container"
-                style="justify-content: center"
-                v-if="hoverIndex === index"
-                @click="openMenu"
-              >
-                <img
-                  :src="
-                    openMenuFlag
-                      ? '/images/eye-icon.png'
-                      : '/images/dot-icon.png'
-                  "
-                  :alt="openMenuFlag ? 'eye-icon' : 'dot-icon'"
-                />
-              </div>
-              <div
-                class="action-menu"
-                v-if="hoverIndex === index && openMenuFlag"
-              >
-                <div class="action-menu-item" style="margin-bottom: 0.5rem">
-                  View
+                <div>
+                  <div class="company-name">Marz Inc.</div>
+                  <div class="company-date">on Feb 5, 2022</div>
                 </div>
-                <div class="action-menu-item">Move to next stage</div>
+              </div>
+              <div class="flex-container" style="position: relative">
+                <div class="company-state flex-container">
+                  <img
+                    src="/images/screening-icon.png"
+                    alt="screening-icon"
+                    style="margin-right: 0.2rem"
+                  />
+                  <div>SCREENING</div>
+                </div>
+                <div
+                  class="action-container flex-container"
+                  style="justify-content: center"
+                  v-if="hoverIndex === index"
+                  @click="openMenu"
+                >
+                  <img
+                    :src="
+                      openMenuFlag
+                        ? '/images/eye-icon.png'
+                        : '/images/dot-icon.png'
+                    "
+                    :alt="openMenuFlag ? 'eye-icon' : 'dot-icon'"
+                  />
+                </div>
+                <div
+                  class="action-menu"
+                  v-if="hoverIndex === index && openMenuFlag"
+                >
+                  <div class="action-menu-item" style="margin-bottom: 0.5rem">
+                    View
+                  </div>
+                  <div class="action-menu-item">Move to next stage</div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="all-companies-link">See all companies</div>
         </div>
-        <div class="all-companies-link">See all companies</div>
       </b-col>
     </b-row>
   </div>
@@ -206,7 +224,7 @@ export default {
 
 <style scoped>
 #dashboard-container {
-  padding: 60px 40px;
+  padding: 65px 45px;
 }
 #dashboard-container .flex-container {
   display: flex;
@@ -229,8 +247,8 @@ export default {
   border-radius: 5px;
   background-color: #dfddd9;
   padding: 1rem;
-  margin: 5px;
   color: #741b47;
+  margin-bottom: 1rem;
 }
 #dashboard-container .label {
   font-size: 14px;
@@ -242,13 +260,16 @@ export default {
 }
 #dashboard-container .sub-title {
   font-size: 13px;
+  height: 2rem;
+  display: flex;
+  align-items: center;
 }
 #dashboard-container .content-block {
   border-radius: 5px;
   background-color: #ffffff;
   padding: 2rem 1.5rem;
-  margin: 5px;
   box-shadow: 1px 2px 29px #1717241a;
+  margin-bottom: 1rem;
 }
 #dashboard-container .circle {
   height: 6px;

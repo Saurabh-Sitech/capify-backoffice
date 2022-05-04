@@ -1,9 +1,10 @@
 <template>
   <div id="repayments-container">
     <div class="title">Repayments</div>
-    <b-container>
-      <b-row>
-        <b-col
+
+    <b-row>
+      <b-col>
+        <div
           class="block"
           style="
             background-color: #dfddd9;
@@ -14,21 +15,24 @@
           <div class="state">OUTSTANDING</div>
           <div class="amount">$ 5,000,000</div>
           <div class="count">456 repayments</div>
-        </b-col>
-        <b-col
+        </div>
+      </b-col>
+      <b-col>
+        <div
           class="block"
           style="
             background-color: #f6edec;
             border-color: #f3e1e0;
             color: #e25f73;
-            margin: 0rem 1rem;
           "
         >
           <div class="state">OVERDUE</div>
           <div class="amount">$ 1,500,000</div>
           <div class="count">122 repayments</div>
-        </b-col>
-        <b-col
+        </div>
+      </b-col>
+      <b-col>
+        <div
           class="block"
           style="
             background-color: #eeede9;
@@ -39,11 +43,12 @@
           <div class="state">DUE THIS MONTH</div>
           <div class="amount">$ 3,500,000</div>
           <div class="count">34 repayments</div>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      </b-col>
+    </b-row>
+
     <div class="content-table">
-      <div class="filter-container">
+      <b-container class="filter-container">
         <b-row>
           <b-col class="flex-container">
             <div
@@ -80,7 +85,7 @@
             <div class="clear-link">Clear</div>
           </b-col>
         </b-row>
-      </div>
+      </b-container>
       <div class="table-container">
         <b-row class="table-title">
           <b-col class="table-title-field">
