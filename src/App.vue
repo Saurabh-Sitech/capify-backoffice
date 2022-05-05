@@ -32,4 +32,17 @@ body {
   font-family: "Roboto_Regular" !important;
   background-color: #f5f3ef !important;
 }
+
+#confirm-modal .modal-body {
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 29px #1717241a;
+}
+
+#confirm-modal .modal-title {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #5e595c;
+}
 </style>

@@ -151,6 +151,35 @@
         </base-button>
       </b-col>
     </b-row>
+    <b-modal id="confirm-modal" size="lg" centered hide-header hide-footer>
+      <div class="modal-title">
+        Are you sure you want to change and save the company details?
+      </div>
+      <b-row>
+        <b-col lg="2" sm="0" />
+        <b-col lg="4" sm="6">
+          <base-button
+            type="submit"
+            stylevariant="secondary"
+            customStyle="font-size: 15px; font-family: Roboto_Medium;margin-right:0.5rem;"
+            @onClick="cancel"
+          >
+            YES, SAVE CHANGES
+          </base-button>
+        </b-col>
+        <b-col lg="4" sm="6">
+          <base-button
+            type="submit"
+            stylevariant="secondary"
+            customStyle="font-size: 15px; font-family: Roboto_Medium"
+            @onClick="cancel"
+          >
+            CANCEL
+          </base-button>
+        </b-col>
+        <b-col lg="2" sm="0" />
+      </b-row>
+    </b-modal>
   </div>
 </template>
 
@@ -159,7 +188,7 @@ export default {
   emits: ["close-edit-mode"],
   methods: {
     save() {
-      this.$emit("close-edit-mode");
+      this.$bvModal.show("confirm-modal");
     },
     cancel() {
       this.$emit("close-edit-mode");

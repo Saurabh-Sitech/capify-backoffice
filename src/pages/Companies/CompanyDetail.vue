@@ -134,6 +134,10 @@ export default {
     },
     edit() {
       this.isEdit = !this.isEdit;
+      const element = document.getElementById("content-container");
+      if (element) {
+        element.scrollTop = 0;
+      }
     },
   },
 };
