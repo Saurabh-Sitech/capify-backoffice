@@ -3,6 +3,7 @@
     class="btn"
     :class="{
       primaryBtn: stylevariant === 'primary',
+      secondaryBtn: stylevariant === 'secondary',
     }"
     :type="type"
     @click="onClick"
@@ -45,6 +46,18 @@ export default {
   background-color: #6b2346;
 }
 .primaryBtn:disabled {
+  opacity: 0.3;
+}
+.secondaryBtn {
+  background-color: #ffffff;
+  color: #741b47;
+  border: 1px solid #741b47;
+}
+.secondaryBtn:hover {
+  background-color: #741b47;
+  color: #ffe599;
+}
+.secondaryBtn:disabled {
   opacity: 0.3;
 }
 </style>

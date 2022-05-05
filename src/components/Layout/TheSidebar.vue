@@ -121,34 +121,34 @@ export default {
   background-color: #ffffff;
   position: relative;
 }
-.tab-container {
+#main-sidebar .tab-container {
   width: 100%;
 }
-.tab.active {
+#main-sidebar .tab.active {
   background-color: #fff2cc;
 }
-.tab.comming-soon {
+#main-sidebar .tab.comming-soon {
   cursor: not-allowed;
 }
-.tab {
+#main-sidebar .tab {
   padding: 1rem;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.active .tab-name {
+#main-sidebar .active .tab-name {
   color: #511332;
 }
-.comming-soon .tab-name {
+#main-sidebar .comming-soon .tab-name {
   color: #dfddd9;
 }
-.tab-name {
+#main-sidebar .tab-name {
   margin-left: 1rem;
   font-size: 16px;
   font-family: Roboto_Medium;
   color: #5e595c;
 }
-.notification-count {
+#main-sidebar .notification-count {
   font-size: 14px;
   font-family: Roboto_Medium;
   color: #ffffff;
@@ -160,12 +160,12 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.comming-soon-text {
+#main-sidebar .comming-soon-text {
   font-size: 11px;
   font-family: Roboto_Medium;
   color: #bab8b9;
 }
-.logo-container {
+#main-sidebar .logo-container {
   background-color: #260b19;
   height: 120px;
   width: 100%;
@@ -173,18 +173,18 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.bottom-container {
+#main-sidebar .bottom-container {
   width: 100%;
   position: absolute;
   bottom: 0;
   border-top: 1px solid #f0efed;
 }
-.user-info {
+#main-sidebar .user-info {
   padding: 1rem 1rem 0.5rem 1rem;
   display: flex;
   align-items: center;
 }
-.avtar-container {
+#main-sidebar .avtar-container {
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -196,23 +196,23 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.user-email {
+#main-sidebar .user-email {
   margin-left: 1rem;
   font-size: 14px;
   font-family: Roboto_Medium;
   color: #260b19;
 }
-.link-container {
+#main-sidebar .link-container {
   padding: 0.5rem 1rem 1rem 1rem;
   display: flex;
   align-items: center;
 }
-.link {
+#main-sidebar .link {
   cursor: pointer;
   font-size: 15px;
   color: #741b47;
 }
-.link:hover {
+#main-sidebar .link:hover {
   text-decoration: underline;
 }
 </style>

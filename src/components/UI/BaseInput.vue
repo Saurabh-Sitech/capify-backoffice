@@ -11,8 +11,9 @@
       :placeholder="placeholder"
       v-model.trim="inputfield"
       :style="customStyle"
+      :readonly="readOnly"
     />
-    <div class="helperText" v-if="helperText">
+    <div class="helperText" :style="helperTextStyle" v-if="helperText">
       {{ helperText }}
     </div>
   </div>
@@ -27,10 +28,12 @@ export default {
     "placeholder",
     "isValid",
     "helperText",
+    "helperTextStyle",
     "field",
     "value",
     "customStyle",
     "removeDefaultMargin",
+    "readOnly",
   ],
   data() {
     return { inputfield: this.value };
@@ -53,10 +56,9 @@ export default {
 
 <style scoped>
 .labelText {
-  font-size: 16px;
+  font-size: 15px;
   color: #5e595c;
   margin-bottom: 5px;
-  font-family: Roboto_Medium;
 }
 .helperText {
   color: #f44336;
@@ -94,5 +96,9 @@ export default {
   border-color: #741b47;
   outline: none;
   box-shadow: none;
+}
+.form-control[readonly] {
+  background-color: #f5f3ef;
+  border-color: #ebe9e5;
 }
 </style>

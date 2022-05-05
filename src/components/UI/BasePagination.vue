@@ -70,18 +70,18 @@ export default {
   display: flex;
   align-items: center;
 }
-.page-counts {
+#pagination-container .page-counts {
   font-size: 13px;
 }
-.page-size {
+#pagination-container .page-size {
   font-family: "Roboto_Bold";
   color: #5e595c;
 }
-.page-total {
+#pagination-container .page-total {
   font-family: "Roboto_Regular";
   color: #8f8b8d;
 }
-.page-change-button {
+#pagination-container .page-change-button {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -92,11 +92,11 @@ export default {
   justify-content: center;
   cursor: pointer;
 }
-.page-change-button.disabled {
+#pagination-container .page-change-button.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.page-change-button img {
+#pagination-container .page-change-button img {
   height: 18px;
   width: 18px;
 }

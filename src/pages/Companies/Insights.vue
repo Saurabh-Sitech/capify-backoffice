@@ -552,36 +552,36 @@ export default {
 #Insights-Container {
   padding: 1rem;
 }
-.block {
+#Insights-Container .block {
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0px 1px 4px #17172429;
   margin-bottom: 2rem;
 }
-.title {
+#Insights-Container .title {
   font-size: 24px;
   color: #260b19;
 }
-.sub-title {
+#Insights-Container .sub-title {
   padding: 0.2rem 0.5rem;
   font-size: 11px;
   font-family: Roboto_Bold;
   text-transform: uppercase;
 }
-.map-container {
+#Insights-Container .map-container {
   height: 400px;
   padding: 1rem 0rem;
 }
-.legend_container {
+#Insights-Container .legend_container {
   cursor: pointer;
 }
-.legend_container .label {
+#Insights-Container .legend_container .label {
   font-size: 13px;
   color: #260b19;
   margin-right: 0.5rem;
 }
-.legend_container .value {
+#Insights-Container .legend_container .value {
   border: 1px dashed #411884;
   width: 20px;
 }
