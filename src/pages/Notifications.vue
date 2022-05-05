@@ -150,13 +150,13 @@ export default {
 
 <style scoped>
 #notifications-container {
-  padding: 65px 45px;
+  padding: 60px;
 }
 #notifications-container .title {
   font-size: 18px;
   font-family: Roboto_Medium;
   color: #8f8b8d;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 #notifications-container .top-container {
   display: flex;

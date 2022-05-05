@@ -224,7 +224,7 @@ export default {
 
 <style scoped>
 #dashboard-container {
-  padding: 65px 45px;
+  padding: 60px;
 }
 #dashboard-container .flex-container {
   display: flex;

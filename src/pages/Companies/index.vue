@@ -165,7 +165,7 @@
           <div
             class="action-container"
             v-if="hoverIndex === index"
-            @click="openMenu"
+            @click.stop="openMenu"
           >
             <img
               :src="
@@ -301,7 +301,7 @@ export default {
 
 <style scoped>
 #companies-container {
-  padding: 65px 45px;
+  padding: 60px;
 }
 #companies-container .title {
   font-size: 18px;

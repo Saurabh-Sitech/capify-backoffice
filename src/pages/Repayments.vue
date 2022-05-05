@@ -232,7 +232,7 @@ export default {
 
 <style scoped>
 #repayments-container {
-  padding: 65px 45px;
+  padding: 60px;
 }
 #repayments-container .title {
   font-size: 18px;

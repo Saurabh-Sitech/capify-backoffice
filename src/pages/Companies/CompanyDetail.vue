@@ -87,14 +87,16 @@
         </b-row>
       </b-container>
       <RepaymentsSchedule v-if="selectedTab === 0" />
+      <Insights v-if="selectedTab === 1" />
     </div>
   </div>
 </template>
 
 <script>
 import RepaymentsSchedule from "./RepaymentsSchedule.vue";
+import Insights from "./Insights.vue";
 export default {
-  components: { RepaymentsSchedule },
+  components: { RepaymentsSchedule, Insights },
   data() {
     return {
       selectedTab: 0,
