@@ -52,11 +52,10 @@
         <b-row>
           <b-col class="flex-container">
             <div
-              class="tab"
               v-for="(tab, index) in tabs"
               :key="index"
               @click="selectTab(index)"
-              :class="selectedTab === index ? 'active-tab' : ''"
+              :class="['tab', selectedTab === index ? 'active-tab' : '']"
             >
               {{ tab }}
             </div>

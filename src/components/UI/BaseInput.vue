@@ -4,8 +4,7 @@
       {{ label }}
     </div>
     <input
-      class="form-control"
-      :class="{ invalidInput: isValid ? true : false }"
+      :class="['form-control', { invalidInput: isValid ? true : false }]"
       :type="type"
       :label="label"
       :placeholder="placeholder"

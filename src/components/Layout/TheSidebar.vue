@@ -9,13 +9,11 @@
     </div>
     <div class="tab-container" v-for="(tab, index) in tabs" :key="index">
       <div
-        :class="
-          activetab === index
-            ? 'tab active'
-            : tab.comming_soon
-            ? 'tab comming-soon'
-            : 'tab'
-        "
+        :class="[
+          'tab',
+          activetab === index ? 'active' : '',
+          tab.comming_soon ? 'comming-soon' : '',
+        ]"
         :style="
           tab.comming_soon || tab.notification_count
             ? 'justify-content: space-between'
@@ -105,6 +103,14 @@ export default {
     logout() {
       sessionStorage.clear();
       this.$router.push("/");
+    },
+  },
+  watch: {
+    $route() {
+      const actualtab = this.tabs.findIndex(
+        (each) => each.name === this.$route.name
+      );
+      if (this.activetab !== actualtab) this.activetab = actualtab;
     },
   },
   mounted() {

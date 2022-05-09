@@ -159,7 +159,9 @@
               </div>
             </div>
           </div>
-          <div class="all-companies-link">See all companies</div>
+          <div class="all-companies-link" @click="$router.push('/companies')">
+            See all companies
+          </div>
         </div>
       </b-col>
     </b-row>

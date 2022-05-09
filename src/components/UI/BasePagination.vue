@@ -7,16 +7,14 @@
       >
     </div>
     <div
-      class="page-change-button"
       style="margin: 0rem 0.5rem"
-      :class="{ disabled: active_page === 1 }"
+      :class="[{ disabled: active_page === 1 }, 'page-change-button']"
       @click="prevPage"
     >
       <img src="/images/back-icon.png" alt="back-icon" />
     </div>
     <div
-      class="page-change-button"
-      :class="{ disabled: active_page === total_page }"
+      :class="[{ disabled: active_page === total_page }, 'page-change-button']"
       @click="nextPage"
     >
       <img src="/images/next-icon.png" alt="next-icon" />

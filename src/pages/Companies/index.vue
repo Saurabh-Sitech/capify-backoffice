@@ -113,7 +113,7 @@
           class="content-block"
           @mouseenter="comMouseEnter(index)"
           @mouseleave="comMouseLeave"
-          @click="openDetail(index)"
+          @click.stop="openDetail(index)"
         >
           <div class="d-flex align-items-center">
             <img

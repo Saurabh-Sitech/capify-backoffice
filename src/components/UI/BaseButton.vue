@@ -1,10 +1,12 @@
 <template>
   <button
-    class="btn"
-    :class="{
-      primaryBtn: stylevariant === 'primary',
-      secondaryBtn: stylevariant === 'secondary',
-    }"
+    :class="[
+      'btn',
+      {
+        primaryBtn: stylevariant === 'primary',
+        secondaryBtn: stylevariant === 'secondary',
+      },
+    ]"
     :type="type"
     @click="onClick"
     :style="customStyle"
