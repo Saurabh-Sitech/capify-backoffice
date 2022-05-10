@@ -22,8 +22,8 @@
           class="block"
           style="
             background-color: #f6edec;
-            border-color: #f3e1e0;
-            color: #e25f73;
+            border-color: #edb3b9;
+            color: #d91f3c;
           "
         >
           <div class="state">OVERDUE</div>
@@ -36,8 +36,8 @@
           class="block"
           style="
             background-color: #eeede9;
-            border-color: #e1e0dd;
-            color: #848081;
+            border-color: #c7c5c3;
+            color: #5e595c;
           "
         >
           <div class="state">DUE THIS MONTH</div>
@@ -87,7 +87,7 @@
       </b-container>
       <div class="table-container">
         <b-row class="table-title">
-          <b-col class="table-title-field">
+          <b-col md="2" class="table-title-field">
             <div class="table-title-text">DUE DATE</div>
             <img
               class="sort-icon"
@@ -95,7 +95,7 @@
               alt="sort-icon"
             />
           </b-col>
-          <b-col class="table-title-field">
+          <b-col md="3" class="table-title-field">
             <div class="table-title-text">STATUS</div>
             <img
               class="sort-icon"
@@ -103,7 +103,7 @@
               alt="sort-icon"
             />
           </b-col>
-          <b-col class="table-title-field">
+          <b-col md="3" class="table-title-field">
             <div class="table-title-text">COMPANY</div>
             <img
               class="sort-icon"
@@ -111,7 +111,7 @@
               alt="sort-icon"
             />
           </b-col>
-          <b-col class="table-title-field">
+          <b-col md="4" class="table-title-field">
             <div class="table-title-text">DUE AMOUNT</div>
             <img
               class="sort-icon"
@@ -121,13 +121,13 @@
           </b-col>
         </b-row>
         <b-row class="table-data" v-for="(each, index) in data" :key="index">
-          <b-col class="due-date">{{ each.date }}</b-col>
-          <b-col>
+          <b-col md="2" class="due-date">{{ each.date }}</b-col>
+          <b-col md="3">
             <span class="status">
               {{ each.status }}
             </span>
           </b-col>
-          <b-col class="com-info">
+          <b-col md="3" class="com-info">
             <img
               class="com-avatar"
               src="/images/marz-logo.png"
@@ -135,7 +135,7 @@
             />
             <div class="com-name">{{ each.name }}</div>
           </b-col>
-          <b-col class="amount-container" style="position: relative">
+          <b-col md="4" class="amount-container" style="position: relative">
             <div class="due-amount">{{ each.amount }}</div>
             <div class="action-container" @click="openMenu(index)">
               <img

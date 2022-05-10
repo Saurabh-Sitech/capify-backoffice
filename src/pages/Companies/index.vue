@@ -310,7 +310,7 @@ export default {
   margin-bottom: 1rem;
 }
 #companies-container .block {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
