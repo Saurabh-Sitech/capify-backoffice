@@ -16,7 +16,7 @@
             <img
               src="/images/screening-icon.png"
               alt="screening-icon"
-              style="margin-right: 0.2rem"
+              style="margin-right: 0.5rem"
             />
             <div class="value">70</div>
           </div>
@@ -27,9 +27,9 @@
           <div class="label">QUALIFIED</div>
           <div class="d-flex align-items-center">
             <img
-              src="/images/screening-icon.png"
-              alt="screening-icon"
-              style="margin-right: 0.2rem"
+              src="/images/qualified-icon.png"
+              alt="qualified-icon"
+              style="margin-right: 0.5rem"
             />
             <div class="value">40</div>
           </div>
@@ -40,9 +40,9 @@
           <div class="label">NOT QUALIFIED</div>
           <div class="d-flex align-items-center">
             <img
-              src="/images/screening-icon.png"
-              alt="screening-icon"
-              style="margin-right: 0.2rem"
+              src="/images/not-qualified-icon.png"
+              alt="not-qualified-icon"
+              style="margin-right: 0.5rem"
             />
             <div class="value">30</div>
           </div>
@@ -53,9 +53,9 @@
           <div class="label">IN EXECUTION</div>
           <div class="d-flex align-items-center">
             <img
-              src="/images/screening-icon.png"
-              alt="screening-icon"
-              style="margin-right: 0.2rem"
+              src="/images/execution-icon.png"
+              alt="execution-icon"
+              style="margin-right: 0.5rem"
             />
             <div class="value">33</div>
           </div>
@@ -66,9 +66,9 @@
           <div class="label">FUNDED</div>
           <div class="d-flex align-items-center">
             <img
-              src="/images/screening-icon.png"
-              alt="screening-icon"
-              style="margin-right: 0.2rem"
+              src="/images/funded-icon.png"
+              alt="funded-icon"
+              style="margin-right: 0.5rem"
             />
             <div class="value">22</div>
           </div>
@@ -157,7 +157,7 @@
               <img
                 src="/images/screening-icon.png"
                 alt="screening-icon"
-                style="margin-right: 0.2rem"
+                style="margin-right: 0.5rem"
               />
               <div style="margin-top: 2px">SCREENING</div>
             </div>
